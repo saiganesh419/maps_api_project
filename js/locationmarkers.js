@@ -12,10 +12,10 @@ var myLocations = [
         type: 'Airport'
     },
     {
-        title: 'Deccan Serai Hote',
-        lat: 17.4477736,
-        lng: 78.3677646,
-        type:  'Hotel'
+        title: 'IIIT Hyderabad',
+        lat: 17.431074,
+        lng: 78.416467,
+        type:  'Institution'
     },
     {
         title: 'Krishna Kanth Park',
@@ -24,10 +24,10 @@ var myLocations = [
         type:  'Park'
     },
     {
-        title: 'Shri Jagannath Temple',
-        lat: 17.4361711,
-        lng: 78.4034631,
-        type: 'Temple'
+        title: 'University of Hyderabad',
+        lat: 17.4567849,
+        lng: 78.3262495,
+        type: 'Institution'
     },
     {
         title: 'Public Gardens',
