@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+
+    <meta name="Neighborhood_Map" content="Map of Andhra Pradesh">
+    <title>Neighborhood Map</title>
+    <link rel="stylesheet" href="css/Styles.css">
+    <!-- Bootstrap 4 link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <!-- Goodle Fonts Link-->
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Shadows+Into+Light" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container-fluid h-90">
+        <div class="row h-90">
+            <main class="col p-0 navbar-light">
+                <a href class="float-left m-2 navbar-light" data-target="#sidebar" data-toggle="collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </a>
+                <div class="content bg-light">
+                    <div id="map">
+                        <!-- Map -->
+                        <p class="map_error"></p>
+                    </div>
+                </div>
+            </main>
+            <nav class="col-3 collapse bg-light pt-2 h-90 sidebar_width" id="sidebar">
+                <h4 class="app_title" style="font-family: 'Lobster', cursive; ">Neighborhood Map places</h4>
+                <!-- Search Input method -->
+                <input class="search" data-bind="textInput: searchOption, valueUpdate: 'afterkeydown'" placeholder="Search....">
+                <hr class="sidebar_hr">
+                <ul class="nav flex-column" data-bind="foreach: myLocationsFilter">
+                    <a href="#" style="font-family: 'Shadows Into Light', cursive;"><li class="nav-item text-blue location_list" data-bind="text: title, click: $parent.populateAndBounceMarker"></li></a>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- knockout js file link-->
+    <script src="js/knockout.js" charset="utf-8"></script>
+    <!-- jquery javascript link-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
+    <!-- ajax javascript link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" ></script>
+    <!-- bootstrap javascript link-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" ></script>
+    <!-- location markers javascript file-->
+    <script src="js/locationmarkers.js" charset="utf-8"></script>
+
+    <script src="js/newstyles.js" charset="utf-8"></script>
+    <!-- personalised javascript-->
+    <script src="js/app.js" charset="utf-8"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyAbfwYk0E4B51ikKQg0mjLgcsgcbjZI258&callback=startApp"
+        onerror="googleError()">
+    </script>
+</body>
+</html>
